@@ -1,0 +1,20 @@
+{
+  "public": "_site",
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/"
+    }
+  ],
+  "rewrites": [
+    {
+<<<<<<< HEAD
+      "source": "/**",
+      "destination": "/build/index.html"
+=======
+      "source": "/metronic/react/demo1/**",
+      "destination": "/index.html"
+>>>>>>> 00164cefb261288a62a5d8335af04ccfed4c9716
+    }
+  ]
+}

@@ -97,6 +97,18 @@ export function AsideMenuList({ layoutProps }) {
                   </ListItemIcon>
                   <ListItemText primary="Order Pay" className={classes.textColor} />
                 </ListItem>
+                <ListItem button className={classes.nested} component={RouterLink} to="/order-bulk">
+                  <ListItemIcon>
+                    <StarBorder />
+                  </ListItemIcon>
+                  <ListItemText primary="Order Bulk" className={classes.textColor} />
+                </ListItem>
+                <ListItem button className={classes.nested} component={RouterLink} to="/order-models">
+                  <ListItemIcon>
+                    <StarBorder />
+                  </ListItemIcon>
+                  <ListItemText primary="Orders Models" className={classes.textColor} />
+                </ListItem>
               </List>
             </Collapse>
           </List>

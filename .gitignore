@@ -2,6 +2,7 @@
 
 # dependencies
 /~
+# /public
 /node_modules
 /.pnp
 .pnp.js
@@ -13,9 +14,10 @@
 /.idea
 
 # assets
-/src/_metronic/_assets/js
-/src/_metronic/_assets/plugins
-/src/_metronic/_assets/sass
+
+# /src/_metronic/_assets/js
+# /src/_metronic/_assets/plugins
+# /src/_metronic/_assets/sass
 
 
 # production

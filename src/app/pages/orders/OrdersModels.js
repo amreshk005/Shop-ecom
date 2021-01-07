@@ -6,8 +6,16 @@ import Button from '@material-ui/core/Button';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    "& .MuiSelect-outlined.MuiSelect-outlined ":{
+        paddingRight: "88px",
+        paddingTop: "0px"
+    },
+    "& .MuiOutlinedInput-root ":{
+        margin:" 10px"
+    }
  
   },
+
   paper: {
     padding: theme.spacing(2),
     textAlign: 'center',

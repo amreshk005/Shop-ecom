@@ -24,7 +24,13 @@ const useStyles = makeStyles((theme) => ({
     },
     "& .MuiOutlinedInput-input": {
       padding: "10.5px 100px"
-  }
+  },
+ "& .MuiChip-root ":{
+    borderRadius: "2px;",
+    margin:"4px"
+}
+
+
     
   },
   paper: {
@@ -53,8 +59,7 @@ export default function OrdersBulk() {
           <Typography variant="h4">Orders</Typography>
         </Grid>
         <Grid  item xs={11}>
-        <Card style={{padding:"14px", margin:"8px"}} >
-  
+        <Card style={{padding:"14px", margin:"15px"}} >
         <Grid container style={{alignItems:"center"}} >
         <Grid  xs={9} >
         <Typography>Orders from Oberio suppliers have been found.</Typography>
@@ -224,9 +229,9 @@ export default function OrdersBulk() {
           <Paper className={classes.paper}>
           <Card>
           <Grid container spacing={3}>
-          <Grid item xs={6} sm={5}>
+          <Grid item xs={6} sm={7}>
           <Grid container style={{alignItems:"center"}} spacing={1}> 
-          <Grid item xs={6} sm={8}>
+          <Grid item xs={6} sm={6}>
           <Grid container style={{alignItems:"center"}} >
           <Checkbox inputProps={{ 'aria-label': 'uncontrolled-checkbox' }} />
           <Typography >Order</Typography>
@@ -235,20 +240,20 @@ export default function OrdersBulk() {
           </Grid>
          
         </Grid>
-        <Grid  style={{alignItems:"center"}} item xs={6} sm={4}>
-        <Chip size="small" label="Paid"  style={{backgroundColor: "lightgreen", margin: "10px", padding: "0 20px 0 20px"}}/>
+        <Grid  style={{alignItems:"center"}} item xs={6} sm={6}>
+        <Chip size="small" label="Paid"  style={{backgroundColor: "#29a051", margin: "10px", padding: "0 20px 0 20px", color:"#fff"}}/>
         <Chip
         size="small"
-        label="To Order"
-        style={{backgroundColor: "orange"}}
+        label="Unfulfilled"
+        style={{backgroundColor: "#ffbe4a", color:"#fff"}}
       />
         </Grid>
         </Grid>
         </Grid>
-        <Grid container style={{alignItems:"center"}} item xs={6} sm={3}>
+        <Grid container style={{alignItems:"center"}} item xs={6} sm={2}>
           <Typography>Coustmer: Abhishek</Typography>
         </Grid>
-        <Grid container style={{alignItems:"center"}} item xs={6} sm={4}>
+        <Grid container style={{alignItems:"center"}} item xs={6} sm={3}>
         <Typography>Shop name</Typography>
         </Grid>
       </Grid>
@@ -256,7 +261,7 @@ export default function OrdersBulk() {
           <>
       <Grid  container>
       <Grid container item xs={6} sm={5} style={{alignItems: "center"}} >
-          <Chip  size="small" label="To Order" color="danger" style={{backgroundColor: "#e83e8c", margin: "10px"}}/>
+          <Chip  size="small" label="To Order" color="danger" style={{backgroundColor: "#ef6aaf", margin: "10px", color:"#fff"}}/>
           <Typography>Coustmer: Abhishek</Typography> 
         </Grid>
         <Grid item xs={6} sm={3}>

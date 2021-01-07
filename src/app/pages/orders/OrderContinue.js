@@ -11,6 +11,9 @@ const useStyles = makeStyles((theme) => ({
     "& .MuiOutlinedInput-input": {
       padding: "13.5px 6px",
     },
+    "& .makeStyles-paper-552": {
+      textAlign: "left",
+    },
   },
   paper: {
     padding: theme.spacing(2),

@@ -5,19 +5,13 @@ import { Alert } from "@material-ui/lab";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    "& .makeStyles-paper-75": {
-      textAlign: "left",
-    },
     "& .MuiOutlinedInput-input": {
       padding: "13.5px 6px",
-    },
-    "& .makeStyles-paper-552": {
-      textAlign: "left",
     },
   },
   paper: {
     padding: theme.spacing(2),
-    textAlign: "center",
+    textAlign: "left",
     color: theme.palette.text.secondary,
     width: "100%",
   },
@@ -61,7 +55,7 @@ function OrderContinue() {
                   <Button variant="contained" color="secondary" style={{ margin: "10px", backgroundColor: "#ff3333" }}>
                     Cancel
                   </Button>
-                  <Button variant="contained" color="secondary" style={{ margin: "10px" }}>
+                  <Button variant="contained" color="secondary" style={{ margin: "10px", backgroundColor: "#5dbeaa" }}>
                     Save
                   </Button>
                 </Grid>
@@ -90,7 +84,7 @@ function OrderContinue() {
                   <Button variant="contained" color="secondary" style={{ margin: "10px", backgroundColor: "#ff3333" }}>
                     Cancel
                   </Button>
-                  <Button variant="contained" color="secondary" style={{ margin: "10px" }}>
+                  <Button variant="contained" color="secondary" style={{ margin: "10px", backgroundColor: "#5dbeaa" }}>
                     Save
                   </Button>
                 </Grid>
@@ -109,7 +103,7 @@ function OrderContinue() {
                   <Button variant="contained" color="secondary" style={{ margin: "10px", backgroundColor: "#ff3333" }}>
                     Cancel
                   </Button>
-                  <Button variant="contained" color="secondary" style={{ margin: "10px" }}>
+                  <Button variant="contained" color="secondary" style={{ margin: "10px", backgroundColor: "#5dbeaa" }}>
                     Save
                   </Button>
                 </Grid>
@@ -168,13 +162,18 @@ function OrderContinue() {
                   </Grid>
                 </Grid>
                 <Grid container xs={12}>
-                  <FormControlLabel control={<Checkbox checked={state.checkedB} onChange={handleChange} name="checkedB" color="primary" />} label="send notification email" />
-                  <Button variant="contained" color="secondary" style={{ margin: "5px", backgroundColor: "#ff3333" }}>
-                    Cancel
-                  </Button>
-                  <Button variant="contained" color="secondary" style={{ margin: "5px" }}>
-                    Mark as Shipped
-                  </Button>
+                  <Grid xs={7}>
+                    <FormControlLabel control={<Checkbox checked={state.checkedB} onChange={handleChange} name="checkedB" color="primary" />} label="send notification email" />
+                  </Grid>
+
+                  <Grid container xs={5}>
+                    <Button variant="contained" color="secondary" style={{ margin: "5px", backgroundColor: "#ff3333" }}>
+                      Cancel
+                    </Button>
+                    <Button variant="contained" color="secondary" style={{ margin: "5px", backgroundColor: "#5dbeaa" }}>
+                      Mark as Shipped
+                    </Button>
+                  </Grid>
                 </Grid>
               </Grid>
               <Grid>
@@ -201,8 +200,8 @@ function OrderContinue() {
                   <Button variant="contained" color="secondary" style={{ margin: "10px", backgroundColor: "#ff3333" }}>
                     Cancel
                   </Button>
-                  <Button variant="contained" color="secondary" style={{ margin: "10px" }}>
-                    Save
+                  <Button variant="contained" color="secondary" style={{ margin: "10px", backgroundColor: "#5dbeaa" }}>
+                    Add
                   </Button>
                 </Grid>
               </Grid>

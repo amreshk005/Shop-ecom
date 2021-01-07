@@ -12,11 +12,14 @@ const useStyles = makeStyles((theme) => ({
     "& .MuiOutlinedInput-root ": {
       margin: " 10px",
     },
+    "& .MuiSelect-outlined": {
+      backgroundColor: "#ededf2",
+    },
   },
 
   paper: {
     padding: theme.spacing(2),
-    textAlign: "center",
+    textAlign: "left",
     color: theme.palette.text.secondary,
   },
 }));
@@ -26,10 +29,9 @@ export default function OrderModels() {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={3}>
-        <Grid item xs={6}>
-          {/* <Paper className={classes.paper}>xs=6</Paper> */}
-          <Card style={{ padding: "15px" }}>
+      <Paper className={classes.paper}>
+        <Grid container spacing={3}>
+          <Grid item xs={6}>
             <Typography style={{ color: "#ff3333" }} variant="h5">
               Customer Information
             </Typography>
@@ -66,44 +68,89 @@ export default function OrderModels() {
                 </Grid>
               </Grid>
             </div>
-          </Card>
-          <Grid style={{ marginTop: "20px" }} xs="12">
-            <Typography variant="h6">Notes</Typography>
-            <Typography variant="h6">1. The Export button should say Add CPF #. This CPF number will displayed in customer information under the contact Information section</Typography>
-          </Grid>
-        </Grid>
-        <Grid item xs={6}>
-          <Typography style={{ color: "#ff3333" }} variant="h5">
-            Actions when To Order Status
-          </Typography>
-
-          <Grid container xs="12">
-            <Grid style={{ display: "flex", justifyContent: "flex-end" }} xs="6">
-              <FormControl variant="outlined" className={classes.formControl}>
-                <InputLabel htmlFor="outlined-age-native-simple">Age</InputLabel>
-                <Select
-                  native
-                  classes={{
-                    outlined: classes.select,
-                  }}
-                >
-                  <option aria-label="None" value="" />
-                  <option value={10}>Ten</option>
-                  <option value={20}>Twenty</option>
-                  <option value={30}>Thirty</option>
-                </Select>
-              </FormControl>
+            <Grid style={{ marginTop: "20px" }} xs="12">
+              <Typography variant="h6">Notes</Typography>
+              <Typography variant="h6">1. The Export button should say Add CPF #. This CPF number will displayed in customer information under the contact Information section</Typography>
             </Grid>
-            <Grid xs="6"></Grid>
           </Grid>
+          <Grid item xs={6}>
+            <Grid item xs={12}>
+              <Typography style={{ color: "#ff3333" }} variant="h5">
+                Actions when To Order Status
+              </Typography>
 
-          <Grid xs="6">
-            <Card style={{ padding: "20px" }}>
-              <Typography>Add AliExpress order number Mark as shipped</Typography>
-            </Card>
+              <Grid container xs="12">
+                <Grid style={{ display: "flex", justifyContent: "flex-end" }} xs="6">
+                  <FormControl variant="outlined" className={classes.formControl}>
+                    <InputLabel htmlFor="outlined-age-native-simple">More Actions</InputLabel>
+                    <Select
+                      native
+                      classes={{
+                        outlined: classes.select,
+                      }}
+                    >
+                      <option aria-label="None" value="" />
+                      <option value={10}>Add AliExpress order number</option>
+                      <option value={20}>Mark as shipped</option>
+                    </Select>
+                  </FormControl>
+                </Grid>
+                <Grid xs="6"></Grid>
+              </Grid>
+            </Grid>
+            <Grid item xs={12} style={{ marginTop: "20px" }}>
+              <Typography style={{ color: "#ff3333" }} variant="h5">
+                Actions when In Processing status
+              </Typography>
+
+              <Grid container xs="12">
+                <Grid style={{ display: "flex", justifyContent: "flex-end" }} xs="6">
+                  <FormControl variant="outlined" className={classes.formControl}>
+                    <InputLabel htmlFor="outlined-age-native-simple">More Actions</InputLabel>
+                    <Select
+                      native
+                      classes={{
+                        outlined: classes.select,
+                      }}
+                    >
+                      <option aria-label="None" value="" />
+                      <option value={10}>Mark as shipped</option>
+                      <option value={20}>Edit AliExpress order number</option>
+                      <option value={30}>Delete AliExpress order number</option>
+                    </Select>
+                  </FormControl>
+                </Grid>
+                <Grid xs="6"></Grid>
+              </Grid>
+            </Grid>
+            <Grid item xs={12} style={{ marginTop: "20px" }}>
+              <Typography style={{ color: "#ff3333" }} variant="h5">
+                Actions when Shipped & Awaiting Payment status
+              </Typography>
+
+              <Grid container xs="12">
+                <Grid style={{ display: "flex", justifyContent: "flex-end" }} xs="6">
+                  <FormControl variant="outlined" className={classes.formControl}>
+                    <InputLabel htmlFor="outlined-age-native-simple">More Actions</InputLabel>
+                    <Select
+                      native
+                      classes={{
+                        outlined: classes.select,
+                      }}
+                    >
+                      <option aria-label="None" value="" />
+                      <option value={10}>Get tracking number</option>
+                      <option value={20}>Order product</option>
+                      <option value={30}>Edit AliExpress order number</option>
+                    </Select>
+                  </FormControl>
+                </Grid>
+                <Grid xs="6"></Grid>
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
-      </Grid>
+      </Paper>
     </div>
   );
 }

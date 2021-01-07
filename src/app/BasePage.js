@@ -5,6 +5,8 @@ import { BuilderPage } from "./pages/BuilderPage";
 import { DashboardPage } from "./pages/DashboardPage";
 import OrderContinue from "./pages/orders/OrderContinue";
 import OrdersPay from "./pages/orders/OrdersPay";
+import OrderBulk from './pages/orders/OrdersBulk';
+import OrdersModels from './pages/orders/OrdersModels';
 
 const UserProfilepage = lazy(() => import("./modules/UserProfile/UserProfilePage"));
 const UserSettingsPage = lazy(() => import("./pages/UserSettingsPage"));
@@ -26,8 +28,14 @@ export default function BasePage() {
         <ContentRoute path="/builder" component={BuilderPage} />
         <ContentRoute path="/user-settings" component={UserSettingsPage} />
         <ContentRoute path="/order-pay" component={OrdersPay} />
+<<<<<<< HEAD
         <ContentRoute path="/order-continue" component={OrderContinue} />
 
+=======
+        <ContentRoute path="/order-pay" component={OrdersPay} />
+        <ContentRoute path="/order-bulk" component={OrderBulk} />
+        <ContentRoute path="/order-models" component={OrdersModels} />
+>>>>>>> 5e341129c13cb99d8e66a706d653f02a43a5e76e
         <Route path="/user-profile" component={UserProfilepage} />
         <Redirect to="error/error-v1" />
       </Switch>

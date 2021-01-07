@@ -97,20 +97,17 @@ export function AsideMenuList({ layoutProps }) {
                   </ListItemIcon>
                   <ListItemText primary="Order Pay" className={classes.textColor} />
                 </ListItem>
+                <ListItem button className={classes.nested} component={RouterLink} to="/order-continue">
+                  <ListItemIcon>
+                    <StarBorder />
+                  </ListItemIcon>
+                  <ListItemText primary="Order Continue" className={classes.textColor} />
+                </ListItem>
               </List>
             </Collapse>
           </List>
-          {/* <NavLink className="menu-link" to="/order-pay">
-            <span className="svg-icon menu-icon">
-              <SVG src={toAbsoluteUrl("/media/svg/icons/Shopping/Settings.svg")} />
-            </span>
-            <span className="menu-text">Order Pay</span>
-          </NavLink> */}
         </li>
-        {/*end::1 Level*/}
       </ul>
-
-      {/* end::Menu Nav */}
     </>
   );
 }
